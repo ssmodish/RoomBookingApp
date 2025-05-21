@@ -1,6 +1,7 @@
 ﻿using RoomBookingApp.Core.DataServices;
-using RoomBookingApp.Core.Domain;
 using RoomBookingApp.Core.Models;
+using RoomBookingApp.Domain;
+using RoomBookingApp.Domain.BaseModels;
 
 namespace RoomBookingApp.Core.Processors
 {
@@ -21,7 +22,7 @@ namespace RoomBookingApp.Core.Processors
             }
 
             var availableRooms = _roomBookingService.GetAvailableRooms(bookingRequest.Date);
-            var result = CreateRoomBookingObject<RoomBookingResult>(bookingRequest);
+            RoomBookingResult result = CreateRoomBookingObject<RoomBookingResult>(bookingRequest);
 
             if (availableRooms.Any())
             {

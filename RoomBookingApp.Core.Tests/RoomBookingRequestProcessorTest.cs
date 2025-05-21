@@ -1,10 +1,9 @@
-﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel.Client;
-using Moq;
+﻿using Moq;
 using RoomBookingApp.Core.DataServices;
-using RoomBookingApp.Core.Domain;
 using RoomBookingApp.Core.Enums;
 using RoomBookingApp.Core.Models;
 using RoomBookingApp.Core.Processors;
+using RoomBookingApp.Domain;
 using Shouldly;
 using System;
 using System.Collections.Generic;
