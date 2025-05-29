@@ -5,7 +5,7 @@ using RoomBookingApp.Domain.BaseModels;
 
 namespace RoomBookingApp.Core.Processors
 {
-    public class RoomBookingRequestProcessor
+    public class RoomBookingRequestProcessor : IRoomBookingRequestProcessor
     {
         private readonly IRoomBookingService _roomBookingService;
 
@@ -43,7 +43,7 @@ namespace RoomBookingApp.Core.Processors
             return result;
         }
 
-        private TRoomBooking CreateRoomBookingObject<TRoomBooking>(RoomBookingRequest bookingRequest) 
+        private TRoomBooking CreateRoomBookingObject<TRoomBooking>(RoomBookingRequest bookingRequest)
             where TRoomBooking : RoomBookingBase, new()
         {
             return new TRoomBooking
